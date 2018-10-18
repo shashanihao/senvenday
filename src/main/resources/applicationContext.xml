@@ -39,7 +39,7 @@
     </bean>
     <tx:annotation-driven transaction-manager="txManager"/>
     <!-- 配置javaBean实体类 -->
-    <bean id="studentBean" class="newten.bean.NewTenClickEntity">
+    <bean id="studentBean" class="newten.bean.NewTenHandleEntity">
         <!--属性自动配置 -->
     </bean>
     <!--spring提供的数据库访问操作类 -->
@@ -47,11 +47,11 @@
         <property name="dataSource" ref="dataSource"></property>
     </bean>
     <!-- dao层类 -->
-    <bean id="dao" class="newten.dao.NewTenClickDao">
+    <bean id="dao" class="newten.dao.NewTenHandleDao">
         <property name="jdbcTemplate" ref="jdbcTemplate"></property>
     </bean>
     <!-- 控制层类 ，这个配置无效-->
-    <bean id="controller" class="newten.control.NewTenClickControl">
+    <bean id="controller" class="newten.control.NewTenHandleControl">
         <!-- <property name="dao" ref="dao"></property>-->
     </bean>
 </beans>
